@@ -2,13 +2,32 @@
 
 angular.module('myApp.view1', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
-  });
-}])
 
-.controller('View1Ctrl', [function() {
+.controller('View1Ctrl', function($scope) {
+  $scope.filters = {
+    search: ''
+  };
+  $scope.team = [
+    {
+      name: 'Sean',
+      url:'sean.png'
+    },{
+      name: 'Yaw',
+      url:'yaw.png'
+    },{
+      name: 'Lucy',
+      url:'lucy.png'
+    },{
+      name: 'Eric',
+      url:'eric.png'
+    },{
+      name: 'Rory',
+      url:'rory.png'
+    },{
+      name: 'Hayley',
+      url:'hayley.png'
+    }
+  ];
 
-}]);
+
+});

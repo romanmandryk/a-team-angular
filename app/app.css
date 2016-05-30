@@ -28,3 +28,25 @@
   content: "";
   padding: 0;
 }
+
+.m-t-xl{
+  margin-top: 80px;
+}.m-t{
+  margin-top: 15px;
+}
+
+h1{
+ color: #6eb4ff;
+}
+
+.person{
+  text-align: center;
+  font-size: 1.5em;
+  color: #6eb4ff;
+  height: 250px;
+  overflow: hidden;
+}
+
+.person img{
+  width:150px;
+}

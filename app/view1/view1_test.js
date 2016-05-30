@@ -1,15 +1,19 @@
 'use strict';
 
 describe('myApp.view1 module', function() {
-
+  var scope = {};
   beforeEach(module('myApp.view1'));
 
   describe('view1 controller', function(){
 
     it('should ....', inject(function($controller) {
-      //spec body
-      var view1Ctrl = $controller('View1Ctrl');
+
+      var view1Ctrl = $controller('View1Ctrl', {'$scope': scope});
       expect(view1Ctrl).toBeDefined();
+      expect(scope.filters).toBeDefined();
+      expect(scope.filters.search).toBe('');
+      expect(scope.team).toBeDefined();
+      expect(scope.team && scope.team.length).toBe(6);
     }));
 
   });
